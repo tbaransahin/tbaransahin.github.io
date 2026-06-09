@@ -1,256 +1,1246 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="h-full scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turan Baran Şahin | Temel Hareket ve Jimnastik Eğitmeni</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #FF6B6B;
-            --secondary: #4ECDC4;
-            --accent: #FFE66D;
-            --dark: #292F36;
-            --light: #F7FFF7;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--secondary), #2AB7CA);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-            margin-bottom: 2rem;
-        }
-
-        .hero-container {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid white;
-            object-fit: cover;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-        }
-
-        .title-tag {
-            background-color: var(--primary);
-            color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            display: inline-block;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        section {
-            background: white;
-            border-radius: 20px;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-top: 6px solid var(--secondary);
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 1rem;
-        }
-
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .service-card {
-            background: #fdfdfd;
-            border: 2px solid #eee;
-            border-radius: 15px;
-            padding: 1.5rem;
-            text-align: center;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Timeline / Experience */
-        .timeline-item {
-            position: relative;
-            padding-left: 2rem;
-            border-left: 3px solid var(--primary);
-            margin-bottom: 1.5rem;
-        }
-
-        .timeline-date {
-            font-weight: 800;
-            color: var(--primary);
-            font-size: 0.9rem;
-        }
-
-        /* Footer / Contact */
-        footer {
-            background-color: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 3rem 1rem;
-            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-            margin-top: -1rem;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .social-btn {
-            background: white;
-            color: var(--dark);
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .social-btn:hover {
-            background: var(--primary);
-            color: white;
-            transform: scale(1.05);
-        }
-
-        @media (max-width: 768px) {
-            header { clip-path: none; }
-            footer { clip-path: none; }
-            h1 { font-size: 2rem; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turan Baran Şahin - Dijital Portfolyo & Çocuk Gelişim Uzmanı</title>
+  
+  <!-- CSS Library - Tailwind v4 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts - Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom theme configurations to match React app layout -->
+  <style>
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background-color: #FFFBEB;
+      color: #1e293b;
+    }
+    .font-display {
+      font-family: "Outfit", "Inter", sans-serif;
+    }
+    .font-mono {
+      font-family: "JetBrains Mono", monospace;
+    }
+    /* Hide scrollbars but keep functionality */
+    .scroller-hidden::-webkit-scrollbar {
+      display: none;
+    }
+    .scroller-hidden {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+    /* Printing settings */
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      .print-only {
+        display: block !important;
+      }
+      body {
+        background-color: white !important;
+        color: black !important;
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="min-h-full flex flex-col antialiased selection:bg-[#FEF3C7] selection:text-[#B45309]">
 
-    <header>
-        <div class="hero-container">
-            <img src="https://images.unsplash.com/photo-1574607383276-66db8313dd36?w=500&auto=format&fit=crop&q=60" alt="Turan Baran Şahin" class="profile-img">
-            <h1>Turan Baran Şahin</h1>
-            <div class="title-tag">Çocuk Jimnastiği & Temel Hareket Eğitmeni</div>
+  <!-- Header & Navigation Bar (No-Print) -->
+  <nav class="no-print sticky top-0 z-40 bg-[#FFFBEB]/90 backdrop-blur-md border-b border-amber-100/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <div class="flex items-center gap-2">
+          <div class="h-10 w-10 bg-slate-900 rounded-xl flex items-center justify-center text-white font-display font-black text-xs">
+            TB
+          </div>
+          <div>
+            <span class="font-display font-black text-sm tracking-tight text-slate-900 uppercase block">TURAN BARAN</span>
+            <span class="font-sans text-4xs text-amber-600 font-bold uppercase tracking-widest block -mt-1">ŞAHİN</span>
+          </div>
         </div>
-    </header>
+        
+        <!-- Desktop Nav Items -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#hero" class="text-xs font-semibold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-colors">Başlangıç</a>
+          <a href="#about" class="text-xs font-semibold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-colors">Özgeçmiş</a>
+          <a href="#services" class="text-xs font-semibold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-colors">Hizmetler</a>
+          <a href="#builder" class="text-xs font-semibold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-colors">Parkur Tasarla</a>
+          <a href="#resume" class="text-xs font-semibold uppercase tracking-wider text-slate-600 hover:text-slate-900 transition-colors">Yazdırılabilir CV</a>
+          <a href="#contact" class="bg-slate-900 text-white px-5 py-2.5 rounded-full text-xs font-bold hover:bg-slate-800 transition-all shadow-sm">İletişim</a>
+        </div>
 
-    <main>
-        <section>
-            <h2>Hakkımda 🙋‍♂️</h2>
-            <p>Merhaba! Ben Turan Baran Şahin. Çocukların fiziksel, zihinsel ve motor gelişimlerini desteklemek amacıyla anaokulu ve temel jimnastik alanlarında hareket eğitimi veriyorum. Sporu bir zorunluluk değil, oyun ve eğlence olarak ele alarak miniklerin özgüvenli bireyler olmalarına katkı sağlıyorum.</p>
-            <p>Esnek, dinamik ve yaş grubuna uygun oyunlaştırılmış antrenman metotlarımla çocukların sporu sevmesini ve temel hareket becerilerini (koşu, sıçrama, denge, esneklik) en doğru yaşta kazanmalarını hedefliyorum.</p>
-        </section>
+        <!-- Mobile Nav Toggle button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
 
-        <section style="border-top-color: var(--primary);">
-            <h2>Çalışma Alanlarım 🎯</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🤸‍♂️</div>
-                    <h3>Temel Jimnastik</h3>
-                    <p>Vücut kontrolü, esneklik, denge ve temel jimnastik hareketlerinin yaş grubuna göre uyarlanması.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏫</div>
-                    <h3>Anaokulu Hareket Eğitimi</h3>
-                    <p>Okul öncesi kurumlara özel eğlenceli ve motor beceri odaklı spor programları.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎈</div>
-                    <h3>Oyun Temelli Spor</h3>
-                    <p>Kurallı oyunlar ve sportif aktivitelerle çocukların sosyalleşmesi ve enerjilerini doğru yönlendirmesi.</p>
-                </div>
+    <!-- Mobile Menu dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#FFFBEB] border-b border-amber-100/80 px-4 pt-2 pb-6 space-y-3">
+      <a href="#hero" class="block text-sm font-semibold text-slate-700 hover:text-slate-900 px-3 py-2 rounded-lg">Başlangıç</a>
+      <a href="#about" class="block text-sm font-semibold text-slate-700 hover:text-slate-900 px-3 py-2 rounded-lg">Özgeçmiş</a>
+      <a href="#services" class="block text-sm font-semibold text-slate-700 hover:text-slate-900 px-3 py-2 rounded-lg">Hizmetler</a>
+      <a href="#builder" class="block text-sm font-semibold text-slate-700 hover:text-slate-900 px-3 py-2 rounded-lg">Parkur Tasarla</a>
+      <a href="#resume" class="block text-sm font-semibold text-slate-700 hover:text-slate-900 px-3 py-2 rounded-lg">Yazdırılabilir CV</a>
+      <a href="#contact" class="block text-sm font-bold text-center bg-slate-900 text-white py-2.5 rounded-lg">İletişime Geçin</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative min-h-[calc(100vh-80px)] py-12 md:py-20 flex items-center overflow-hidden bg-[#FFFBEB] no-print">
+    <!-- Decorative Graphic Ornaments from Clean Minimalism Theme -->
+    <div class="absolute -top-10 -right-10 w-64 h-64 bg-[#FEF3C7] rounded-full opacity-60 pointer-events-none"></div>
+    <div class="absolute top-1/2 -left-16 w-48 h-48 bg-[#E0F2FE] rounded-full opacity-50 pointer-events-none"></div>
+    <div class="absolute bottom-10 right-20 w-32 h-32 border-4 border-[#FCA5A5] rounded-xl rotate-12 opacity-30 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: Content -->
+        <div class="lg:col-span-7 flex flex-col gap-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 bg-[#FEF3C7] text-[#B45309] px-4 py-1.5 rounded-full font-heading font-extrabold text-xs uppercase tracking-wider self-center lg:self-start shadow-xs border border-amber-200/50">
+            <span class="animate-bounce">🤸‍♂️</span> Minik Adımlar, Büyük Gelişimler!
+          </div>
+
+          <h1 class="font-display font-black text-5xl sm:text-6xl lg:text-7xl text-slate-900 leading-none tracking-tighter">
+            Merhaba! Ben <br>
+            <span class="block mt-2">
+              TURAN BARAN <br>
+              <span class="text-[#F59E0B]">ŞAHİN</span>
+            </span>
+          </h1>
+
+          <p class="font-sans text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Yargılanmayacakları, güvenli ve enerjik bir öğrenme ortamında çocuklarımızın potansiyeli sporla sosyalleşerek gelişir. Marmara BESYO mezunu bir çocuk antrenörü olarak okul öncesi egzersiz planlarını sanata dönüştürüyorum.
+          </p>
+
+          <!-- Badges -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-lg mx-auto lg:mx-0">
+            <div class="flex items-center gap-2.5 bg-white p-3.5 rounded-[24px] border border-slate-100 shadow-xl shadow-amber-900/5">
+              <div class="h-8 w-8 rounded-lg bg-[#FDE68A] text-[#B55D00] flex items-center justify-center font-bold">⚡</div>
+              <div class="text-left">
+                <span class="font-display font-bold text-xs block text-slate-900">Hareket Seçeneği</span>
+                <span class="font-sans text-2xs text-slate-500">Temel Koordinasyon</span>
+              </div>
             </div>
-        </section>
-
-        <section style="border-top-color: var(--accent);">
-            <h2>Deneyim & Eğitim 📜</h2>
             
-            <div class="timeline-item">
-                <div class="timeline-date">2022 - Halen</div>
-                <h3>Bağımsız Hareket ve Jimnastik Eğitmeni</h3>
-                <p>Çeşitli anaokulları ve spor merkezlerinde temel hareket ve jimnastik dersleri.</p>
+            <div class="flex items-center gap-2.5 bg-white p-3.5 rounded-[24px] border border-slate-100 shadow-xl shadow-amber-900/5">
+              <div class="h-8 w-8 rounded-lg bg-[#BAE6FD] text-sky-600 flex items-center justify-center font-bold">🧭</div>
+              <div class="text-left">
+                <span class="font-display font-bold text-xs block text-slate-900">Cimnastik</span>
+                <span class="font-sans text-2xs text-slate-500">Denge & Esneklik</span>
+              </div>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-date">2021 - 2022</div>
-                <h3>Stajyer / Yardımcı Eğitmen</h3>
-                <p>Çocuk jimnastiği kampları ve temel hareket eğitimi programlarında aktif görev.</p>
+            <div class="flex items-center gap-2.5 bg-white p-3.5 rounded-[24px] border border-slate-100 shadow-xl shadow-amber-900/5 col-span-2 sm:col-span-1">
+              <div class="h-8 w-8 rounded-lg bg-[#FECACA] text-rose-500 flex items-center justify-center font-bold">📆</div>
+              <div class="text-left">
+                <span class="font-display font-bold text-xs block text-slate-900">Yaş Grupları</span>
+                <span class="font-sans text-2xs text-slate-500">3-10 Yaş Seviyesi</span>
+              </div>
             </div>
+          </div>
 
-            <div class="timeline-item">
-                <div class="timeline-date">2023</div>
-                <h3>Antrenörlük / Hareket Eğitimi Seminerleri</h3>
-                <p>Okul öncesi çocuklarda motor gelişim ve pedagojik yaklaşım sertifika programları.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <h2>İletişimde Kalalım 📬</h2>
-        <p style="color: #ccc; max-width: 400px; margin: 0 auto;">Yeni projeler, anaokulu işbirlikleri veya ders talepleri için bana sosyal medya veya e-posta üzerinden ulaşabilirsiniz.</p>
-        <div class="social-links">
-            <a href="mailto:ornek@email.com" class="social-btn">E-posta</a>
-            <a href="https://instagram.com" class="social-btn" target="_blank">Instagram</a>
-            <a href="https://linkedin.com" class="social-btn" target="_blank">LinkedIn</a>
+          <!-- Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-4">
+            <a href="#contact" class="flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-[20px] font-display font-bold text-base shadow-lg transition-all">
+              Bana Ulaşın ➜
+            </a>
+            <a href="#builder" class="flex items-center justify-center gap-2 bg-white hover:bg-amber-50/40 text-slate-800 border-2 border-slate-100 px-8 py-4 rounded-[20px] font-display font-bold text-base shadow-sm transition-all">
+              Örnek Parkur Tasarla <span class="bg-[#10B981] text-white text-[10px] px-2 py-0.5 rounded-full animate-pulse font-normal">Yeni</span>
+            </a>
+          </div>
         </div>
-        <p style="font-size: 0.8rem; margin-top: 3rem; opacity: 0.7;">© 2026 - Turan Baran Şahin</p>
-    </footer>
 
+        <!-- Right Column: Hero Visual -->
+        <div class="lg:col-span-5 flex justify-center relative">
+          <!-- Spinning ambient BG -->
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-radial-from-[#FEF3C7] to-transparent -z-10 animate-pulse"></div>
+          
+          <div class="relative rounded-[40px] overflow-hidden shadow-xl shadow-amber-905 border-4 border-white aspect-[4/3] bg-amber-100/60 p-2 w-full max-w-md">
+            <!-- Modern illustrative image/placeholder -->
+            <div class="w-full h-full bg-gradient-to-tr from-amber-200 to-[#FEF3C7] rounded-[32px] flex flex-col items-center justify-center p-6 text-center text-amber-900">
+              <span class="text-7xl mb-4 animate-bounce">🤸‍♂️</span>
+              <span class="font-display font-black text-xl tracking-tight">Turan Baran Şahin</span>
+              <span class="text-xs uppercase tracking-widest text-amber-700/80 font-bold mt-1">Pedagojik Jimnastik & Koordinasyon</span>
+              <!-- Swappable tip for custom image -->
+              <span class="text-[9px] text-[#B45309]/50 block mt-6 font-mono">image path: assets/images/hero_gymnastics.png</span>
+            </div>
+          </div>
+
+          <!-- Extra Floating badge 1 -->
+          <div class="absolute top-8 -left-6 bg-white border border-slate-100 py-2.5 px-4 rounded-[20px] shadow-sm flex items-center gap-3">
+            <div class="h-10 w-10 rounded-xl bg-[#FEF3C7] text-[#F59E0B] flex items-center justify-center font-display font-extrabold text-sm">%100</div>
+            <div>
+              <h4 class="font-display font-bold text-xs text-slate-900">Çocuk Odaklı</h4>
+              <p class="font-sans text-[10px] text-slate-500">Pedagojik Yaklaşım</p>
+            </div>
+          </div>
+
+          <!-- Extra Floating badge 2 -->
+          <div class="absolute bottom-10 -right-6 bg-white border border-slate-100 py-2.5 px-4 rounded-[20px] shadow-sm flex items-center gap-3">
+            <div class="h-10 w-10 rounded-xl bg-[#E0F2FE] text-sky-600 flex items-center justify-center font-display font-extrabold text-sm">☺</div>
+            <div>
+              <h4 class="font-display font-bold text-xs text-slate-900">Eğitici Oyunlar</h4>
+              <p class="font-sans text-[10px] text-slate-500">Güvenli İstasyonlar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Split Grid: Quick Badges (Part of theme template) -->
+  <section class="py-6 bg-white border-y border-amber-100/50 no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-[#FDE68A] p-6 rounded-[28px] flex flex-col justify-center items-center text-center shadow-xs">
+          <span class="text-4xl mb-2">🤸‍♂️</span>
+          <h4 class="font-display font-black text-sm uppercase tracking-wider text-amber-950">Temel Jimnastik</h4>
+        </div>
+        <div class="bg-[#BAE6FD] p-6 rounded-[28px] flex flex-col justify-center items-center text-center shadow-xs">
+          <span class="text-4xl mb-2">⚽</span>
+          <h4 class="font-display font-black text-sm uppercase tracking-wider text-sky-950">Hareket Eğitimi</h4>
+        </div>
+        <div class="bg-[#FECACA] p-6 rounded-[28px] flex flex-col justify-center items-center text-center shadow-xs">
+          <span class="text-4xl mb-2">🏫</span>
+          <h4 class="font-display font-black text-sm uppercase tracking-wider text-rose-950">Ana Okulu Branş</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Experience with Tabs -->
+  <section id="about" class="py-20 bg-[#FFFBEB] border-b border-amber-100/50 no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-[#F59E0B] font-display font-extrabold text-xs uppercase tracking-widest bg-[#FEF3C7] px-4 py-1.5 rounded-full inline-block mb-3 border border-amber-200/50">
+          ÖZGEÇMİŞ & KREDİBİLİTE
+        </span>
+        <h2 class="font-display font-black text-4xl text-slate-900 mb-4 tracking-tight">Turan Baran Şahin Kimdir?</h2>
+        <p class="font-sans text-sm sm:text-base text-slate-600">
+          Marmara Üniversitesi Beden Eğitimi ve Spor Öğretmenliği kökenli, çocukların biyopsikososyal gelişimini derslerine entegre eden uzman antrenör profili.
+        </p>
+      </div>
+
+      <!-- Quick Metrics Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
+        <div class="bg-white border border-slate-100 p-6 rounded-[24px] shadow-xl shadow-amber-900/5 text-center flex flex-col items-center justify-center gap-1 hover:border-amber-300 transition-colors">
+          <div class="text-3xl">🏅</div>
+          <div class="font-display font-black text-3xl text-slate-900">7+ Yıl</div>
+          <div class="text-[11px] text-slate-500 font-bold uppercase tracking-wider">Aktif Sektör Deneyimi</div>
+        </div>
+        <div class="bg-white border border-slate-100 p-6 rounded-[24px] shadow-xl shadow-amber-900/5 text-center flex flex-col items-center justify-center gap-1 hover:border-amber-300 transition-colors">
+          <div class="text-3xl">👧</div>
+          <div class="font-display font-black text-3xl text-slate-900">1500+</div>
+          <div class="text-[11px] text-slate-500 font-bold uppercase tracking-wider">Dokunulan Mutlu Çocuk</div>
+        </div>
+         <div class="bg-white border border-slate-100 p-6 rounded-[24px] shadow-xl shadow-amber-900/5 text-center flex flex-col items-center justify-center gap-1 hover:border-amber-300 transition-colors">
+          <div class="text-3xl">🔑</div>
+          <div class="font-display font-black text-3xl text-slate-900">12+</div>
+          <div class="text-[11px] text-slate-500 font-bold uppercase tracking-wider">Seçkin Kurum Referansı</div>
+        </div>
+        <div class="bg-white border border-slate-100 p-6 rounded-[24px] shadow-xl shadow-amber-900/5 text-center flex flex-col items-center justify-center gap-1 hover:border-amber-300 transition-colors">
+          <div class="text-3xl">🛡️</div>
+          <div class="font-display font-black text-3xl text-slate-900">%100</div>
+          <div class="text-[11px] text-slate-500 font-bold uppercase tracking-wider">Sıfır Yaralanma Skoru</div>
+        </div>
+      </div>
+
+      <!-- Outer Split Container -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-6xl mx-auto">
+        
+        <!-- Left: Static card with profile metadata -->
+        <div class="lg:col-span-4 flex flex-col gap-6 items-center lg:items-stretch lg:sticky lg:top-24">
+          <div class="bg-white border border-slate-100 rounded-[32px] p-6 shadow-xl shadow-amber-900/5 w-full max-w-sm mx-auto text-center flex flex-col items-center gap-4 relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-24 bg-gradient-to-r from-amber-400 to-[#F59E0B]"></div>
+            
+            <!-- Avatar circle -->
+            <div class="w-28 h-28 rounded-full border-4 border-white bg-slate-100 shadow-md relative z-10 overflow-hidden mt-6 flex items-center justify-center">
+              <span class="text-5xl">👤</span>
+            </div>
+
+            <div class="relative z-10 w-full mt-2">
+              <h3 class="font-display font-black text-xl text-slate-900 leading-snug">
+                Turan Baran Şahin
+              </h3>
+              <span class="font-heading font-extrabold text-[10px] uppercase text-amber-800 bg-[#FEF3C7] px-3 py-1 rounded-full inline-block mt-1">
+                Marmara BESYO Mezunu
+              </span>
+              
+              <!-- Divider line -->
+              <div class="border-t border-slate-150 pt-4 mt-4 flex flex-col gap-2.5 text-left w-full">
+                <div class="flex items-center gap-2.5 text-xs text-slate-600">
+                  <span class="text-slate-400">🏫</span> <span>Marmara Üniversitesi Spor Bilimleri</span>
+                </div>
+                <div class="flex items-center gap-2.5 text-xs text-slate-600">
+                  <span class="text-slate-400">📍</span> <span>İstanbul, Türkiye</span>
+                </div>
+                <div class="flex items-center gap-2.5 text-xs text-slate-600">
+                  <span class="text-slate-400">✉</span> <span class="break-all">tbaransahin44@gmail.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Tabbed panels -->
+        <div class="lg:col-span-8 bg-white border border-slate-100 shadow-xl shadow-amber-900/5 rounded-[32px] p-6 md:p-8">
+          
+          <!-- Tab selectors -->
+          <div class="flex border-b border-amber-100 pb-2 mb-6 gap-2 overflow-x-auto scroller-hidden">
+            <button onclick="switchTab('tab-bio', this)" class="tab-btn px-5 py-2.5 rounded-xl font-display font-bold text-sm transition-all shrink-0 focus:outline-none bg-slate-950 text-white shadow-xs">
+              Eğitmen Biyografisi
+            </button>
+            <button onclick="switchTab('tab-philosophy', this)" class="tab-btn px-5 py-2.5 rounded-xl font-display font-bold text-sm transition-all shrink-0 focus:outline-none text-slate-500 hover:text-slate-800">
+              Eğitim Vizyonu
+            </button>
+            <button onclick="switchTab('tab-education', this)" class="tab-btn px-5 py-2.5 rounded-xl font-display font-bold text-sm transition-all shrink-0 focus:outline-none text-slate-500 hover:text-slate-800">
+              Pedagojik Altyapı
+            </button>
+          </div>
+
+          <!-- Tab Content 1: Bio -->
+          <div id="tab-bio" class="tab-content block space-y-6">
+            <h4 class="font-display font-extrabold text-lg text-slate-900 border-b border-amber-100 pb-2">Çocuk Gelişimi ve Sporda Tecrübem</h4>
+            <p class="font-sans text-sm text-slate-600 leading-relaxed text-slate-600/95">
+              Uzun yıllardır spor eğitmenliği geçmişimi erken çocukluk pedagojisiyle birleştirerek 3-10 yaş grubu çocukların fiziksel gelişimi üzerinde uzmanlaştım. Marmara Üniversitesi Beden Eğitimi ve Spor Öğretmenliği altyapımla çocukların kaba motor becerilerini, dengelerini, esnekliklerini ve beden farkındalıklarını artıracak eğlenceli ve güvenli müfredatlar kuruyorum.
+            </p>
+            <div class="space-y-4 pt-2">
+              <div class="flex gap-4 items-start pl-4 border-l-2 border-amber-500">
+                <span class="text-lg mt-0.5">🚀</span>
+                <div>
+                  <h5 class="text-xs font-bold text-slate-900 uppercase tracking-widest text-[#B45309]">Erken Fiziksel Okuryazarlık</h5>
+                  <p class="text-xs text-slate-500 mt-1">Sert spordan ziyade çocukların kemik ve eklem sağlığını besleyecek özel koordinasyon oyunlarına öncelik veriyorum.</p>
+                </div>
+              </div>
+              <div class="flex gap-4 items-start pl-4 border-l-2 border-sky-400">
+                <span class="text-lg mt-0.5">🛡️</span>
+                <div>
+                  <h5 class="text-xs font-bold text-slate-900 uppercase tracking-widest text-sky-650">Kapsayıcı ve Pozitif Yaklaşım</h5>
+                  <p class="text-xs text-slate-500 mt-1">Egzersiz sahasında kıyaslanmayan çocuğun heyecanı ve özgüven gelişimi en kritik kazanımdır.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Content 2: Philosophy -->
+          <div id="tab-philosophy" class="tab-content hidden space-y-6">
+            <h4 class="font-display font-extrabold text-lg text-slate-900 border-b border-amber-100 pb-2">Egzersiz ve Hayat Görüşüm</h4>
+            <p class="font-sans text-sm text-slate-600 leading-relaxed italic">
+              "Çocuklar yargılamanın, başarısızlığın ve kıyaslamanın olmadığı, oyun dolu ve son derece güvenli bir ortamda dünyayı bedenleriyle keşfetmelidir. Her çocuk kendi hızında büyür ve çocuklukta atılan her minik adım, gelecekteki sağlıklı yaşamın temelidir."
+            </p>
+            <p class="font-sans text-xs text-slate-500 mt-2">
+              Okul öncesi jimnastik derslerindeki asıl hedefimiz sadece mükemmel taklalar atmak değil; çocukların kendi vücut yeteneklerini heyecanla sınadığı, özdisiplin kazandığı, arkadaşlarıyla sıra beklemeyi ve başarıyı paylaşmayı öğrendiği bir sosyal-motor dengeleme evrenidir.
+            </p>
+          </div>
+
+          <!-- Tab Content 3: Education/Formasyon -->
+          <div id="tab-education" class="tab-content hidden space-y-6">
+            <h4 class="font-display font-extrabold text-lg text-slate-900 border-b border-amber-100 pb-2">Eğitim ve Sertifikasyonlar</h4>
+            <div class="space-y-4">
+              <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                <div class="flex justify-between items-start gap-2">
+                  <h5 class="font-display font-bold text-sm text-slate-900 leading-tight">Beden Eğitimi ve Spor Öğretmenliği Lisansı</h5>
+                  <span class="text-4xs font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded">2019-2023</span>
+                </div>
+                <p class="text-2xs text-slate-500 font-bold mt-1">Marmara Üniversitesi Spor Bilimleri Fakültesi</p>
+                <p class="text-3xs text-slate-500 mt-2">Çocuk Fizyolojisi, Gelişimsel Hareket Eğitim Tasarımı, Pedagojik Formasyon ve Sporda Çocuk Koordinasyon derslerini başarıyla tamamlamıştır.</p>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+                <div class="p-3.5 bg-[#FFFBEB] rounded-xl border border-amber-100/50">
+                  <div class="font-display font-bold text-xs text-slate-900">1. Kademe Cimnastik Antrenörü</div>
+                  <div class="text-3xs text-slate-400 mt-0.5">Türkiye Cimnastik Federasyonu</div>
+                </div>
+                <div class="p-3.5 bg-[#FFFBEB] rounded-xl border border-amber-100/50">
+                  <div class="font-display font-bold text-xs text-slate-900">Çocuk Psikolojisi ve Davranış Yönetimi</div>
+                  <div class="text-3xs text-slate-400 mt-0.5">İstanbul Akademi Enstitüsü</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Code-Transposed Services Section -->
+  <section id="services" class="py-20 bg-white border-b border-amber-100/30 no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-emerald-700 font-display font-extrabold text-xs uppercase tracking-widest bg-emerald-100px px-4 py-1.5 rounded-full inline-block mb-3 border border-emerald-200/50">
+          EĞİTİM & PROGRAM YAPISI
+        </span>
+        <h2 class="font-display font-black text-4xl text-slate-900 mb-4 tracking-tight">Çocuklara Özel Spor Müfredatı</h2>
+        <p class="font-sans text-sm sm:text-base text-slate-650">
+          Yaş gruplarının gelişimsel normları doğrultusunda süzülmüş, pedagojik hedeflere uygun 4 temel eğitim disiplini.
+        </p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Service Card 1 -->
+        <div class="bg-white border border-slate-200/60 rounded-[32px] p-6 md:p-8 flex flex-col justify-between hover:border-emerald-300 hover:shadow-xl hover:shadow-emerald-950/2 tracking-tight transition-all duration-300">
+          <div>
+            <div class="flex justify-between items-start border-b border-slate-50 pb-4 mb-4">
+              <div>
+                <span class="text-4xs font-bold uppercase tracking-widest text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded">Yaş Grubu: 3 - 6</span>
+                <h3 class="font-display font-black text-xl text-slate-900 mt-2">Anaokulu & Kreş Hareket Programı</h3>
+              </div>
+              <span class="text-3xl">🏫</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Okul öncesi eğitim kurumlarının haftalık ders müfredatlarına entegre, çocukların yaş gruplarına özel kaba motor beceri gelişim çalışmaları.
+            </p>
+            <div class="space-y-2 mb-6">
+              <span class="font-display font-extrabold text-[10px] uppercase text-slate-400 tracking-wider">KAZANIMLAR:</span>
+              <div class="grid grid-cols-1 gap-2">
+                <p class="text-2xs text-slate-600 flex items-center gap-2">✔ Grup halinde hareket ederek sosyal uyum</p>
+                <p class="text-2xs text-slate-600 flex items-center gap-2">✔ Yönerge takip etme hızı ve motor planlama</p>
+                <p class="text-2xs text-slate-600 flex items-center gap-2">✔ Sıra bekleme, paylaşım ve empati gelişimi</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-50">
+            <span class="text-3xs font-semibold bg-emerald-50 text-emerald-800 px-2.5 py-1 rounded-full">Denge Parkurları</span>
+            <span class="text-3xs font-semibold bg-emerald-50 text-emerald-800 px-2.5 py-1 rounded-full">Bilişsel Oyunlar</span>
+            <span class="text-3xs font-semibold bg-emerald-50 text-emerald-800 px-2.5 py-1 rounded-full">Motor Kontrol</span>
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="bg-white border border-slate-200/60 rounded-[32px] p-6 md:p-8 flex flex-col justify-between hover:border-amber-300 hover:shadow-xl hover:shadow-amber-950/2 tracking-tight transition-all duration-300">
+          <div>
+            <div class="flex justify-between items-start border-b border-slate-50 pb-4 mb-4">
+              <div>
+                <span class="text-4xs font-bold uppercase tracking-widest text-[#B45309] bg-amber-50 px-2.5 py-1 rounded">Yaş Grubu: 4 - 8</span>
+                <h3 class="font-display font-black text-xl text-slate-900 mt-2">Temel Jimnastik Eğitimi</h3>
+              </div>
+              <span class="text-3xl">🤸‍♂️</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Çocukların yaşam boyu spor becerileri kazanması için en temel basamak olan esneklik, omurga sağlığı ve doğru duruş teknikleri eğitimi.
+            </p>
+            <div class="space-y-2 mb-6">
+              <span class="font-display font-extrabold text-[10px] uppercase text-slate-400 tracking-wider">KAZANIMLAR:</span>
+              <div class="grid grid-cols-1 gap-2">
+                <p class="text-2xs text-slate-600 flex items-center gap-2">✔ Omurga yapısını koruyan sağlıklı bir duruş</p>
+                <p class="text-2xs text-slate-600 flex items-center gap-2">✔ Yüksek esneklik değerleri ile minimum sakatlık</p>
+                <p class="text-2xs text-slate-600 flex items-center gap-2">✔ Beden ağırlığını dengeli ve estetik kontrol</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-4 border-t border-slate-50">
+            <span class="text-3xs font-semibold bg-amber-50 text-amber-800 px-2.5 py-1 rounded-full">Esneklik Sınırları</span>
+            <span class="text-3xs font-semibold bg-amber-50 text-amber-800 px-2.5 py-1 rounded-full">Takla Teknikleri</span>
+            <span class="text-3xs font-semibold bg-amber-50 text-amber-800 px-2.5 py-1 rounded-full">Minder Çalışması</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Gym Station Builder -->
+  <section id="builder" class="py-20 bg-[#FFFBEB] border-b border-amber-100/50 no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-[#F59E0B] font-display font-extrabold text-xs uppercase tracking-widest bg-[#FEF3C7] px-4 py-1.5 rounded-full inline-block mb-3 border border-amber-200/50">
+          DİNAMİK DENEYİM
+        </span>
+        <h2 class="font-display font-black text-4xl text-slate-900 mb-3 tracking-tight">Eğitim İstasyonu Mimarı</h2>
+        <p class="font-sans text-sm sm:text-base text-slate-600">
+          Okul öncesi jimnastik veya hareket eğitim derslerinizin istasyon sıralamasını şimdiden oluşturun, pedagojik gelişim sürelerini ve zorluk katsayılarını simüle edin!
+        </p>
+      </div>
+
+      <!-- Main Live Playground Interface -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Interactive Left: Catalog of items -->
+        <div class="lg:col-span-5 flex flex-col gap-6">
+          <div class="bg-white border border-slate-100 rounded-[32px] p-6 shadow-xl shadow-amber-900/5 col-span-1">
+            <h3 class="font-display font-extrabold text-[#F59E0B] text-sm mb-4 flex items-center gap-2">
+              <span>⚙ İSTASYON MATERYALLERİ</span>
+            </h3>
+            
+            <!-- Age Selection Trigger button simulation -->
+            <div class="mb-5">
+              <label class="font-heading font-extrabold text-[10px] text-slate-400 uppercase tracking-wider block mb-2">Hedef Gelişim Yaşı</label>
+              <div class="grid grid-cols-3 gap-2">
+                <button onclick="setBuilderAge('3-5 Yaş', this)" class="builder-age-btn py-2 px-3 rounded-xl font-display font-bold text-xs border bg-slate-900 text-white border-slate-900">3-5 Yaş</button>
+                <button onclick="setBuilderAge('5-7 Yaş', this)" class="builder-age-btn py-2 px-3 rounded-xl font-display font-bold text-xs border bg-white text-slate-600 border-slate-100 hover:border-amber-200">5-7 Yaş</button>
+                <button onclick="setBuilderAge('7-10 Yaş', this)" class="builder-age-btn py-2 px-3 rounded-xl font-display font-bold text-xs border bg-white text-slate-600 border-slate-100 hover:border-amber-200">7-10 Yaş</button>
+              </div>
+            </div>
+
+            <!-- Elements Catalog List (Click-to-Add) -->
+            <div class="space-y-3">
+              <label class="font-display font-extrabold text-[#F59E0B] text-[10px] uppercase tracking-wider block mb-1">PARKURA ELEMAN EKLE (TIKLA)</label>
+              
+              <!-- Builder Error Alert simulated via JS -->
+              <div id="builder-alert" class="hidden p-3 bg-rose-50 border border-rose-100 rounded-xl text-rose-800 text-[11px] leading-normal flex items-start gap-2 mb-2">
+                <span class="font-bold shrink-0">⚠️</span>
+                <span id="builder-alert-text">Hata mesajı metni</span>
+              </div>
+
+              <!-- Button 1 -->
+              <button onclick="addElementToCourse('Zıplama Taşları', 'Agility', 'colored-agility', 'from-orange-400 to-amber-400')" class="w-full text-left bg-white border border-slate-150 p-3 rounded-2xl flex items-center justify-between hover:border-amber-200 group active:scale-[0.98] transition-all">
+                <div class="flex gap-3 items-center">
+                  <div class="p-2.5 rounded-xl bg-gradient-to-tr from-orange-400 to-amber-400 text-white shrink-0">⚡</div>
+                  <div>
+                    <h4 class="font-display font-bold text-xs text-slate-800 group-hover:text-amber-650 transition-colors">Zıplama Taşları</h4>
+                    <p class="text-[10px] text-slate-400 leading-normal">Kaba motor dikey sıçrama koordinasyonu</p>
+                  </div>
+                </div>
+                <span class="text-amber-500 bg-amber-50 p-1 rounded-lg hover:bg-amber-100">+</span>
+              </button>
+
+              <!-- Button 2 -->
+              <button onclick="addElementToCourse('Denge Tahtası', 'Denge', 'colored-balance', 'from-emerald-400 to-teal-400')" class="w-full text-left bg-white border border-slate-150 p-3 rounded-2xl flex items-center justify-between hover:border-amber-200 group active:scale-[0.98] transition-all">
+                <div class="flex gap-3 items-center">
+                  <div class="p-2.5 rounded-xl bg-gradient-to-tr from-emerald-400 to-teal-400 text-white shrink-0">🧭</div>
+                  <div>
+                    <h4 class="font-display font-bold text-xs text-slate-800 group-hover:text-amber-650 transition-colors">Denge Tahtası</h4>
+                    <p class="text-[10px] text-slate-400 leading-normal">Sırt omurga & vestibular denge kontrolü</p>
+                  </div>
+                </div>
+                <span class="text-amber-500 bg-amber-50 p-1 rounded-lg hover:bg-amber-100">+</span>
+              </button>
+
+              <!-- Button 3 -->
+              <button onclick="addElementToCourse('Takla Minderi', 'Jimnastik', 'colored-gymnastics', 'from-sky-400 to-blue-400')" class="w-full text-left bg-white border border-slate-150 p-3 rounded-2xl flex items-center justify-between hover:border-amber-200 group active:scale-[0.98] transition-all">
+                <div class="flex gap-3 items-center">
+                  <div class="p-2.5 rounded-xl bg-gradient-to-tr from-sky-400 to-blue-400 text-white shrink-0">🤸‍♂️</div>
+                  <div>
+                    <h4 class="font-display font-bold text-xs text-slate-800 group-hover:text-amber-650 transition-colors">Takla Minderi</h4>
+                    <p class="text-[10px] text-slate-400 leading-normal">Pedagojik kontrollü öne takla akışı</p>
+                  </div>
+                </div>
+                <span class="text-amber-500 bg-amber-50 p-1 rounded-lg hover:bg-amber-100">+</span>
+              </button>
+
+              <!-- Button 4 -->
+              <button onclick="addElementToCourse('Çember Tüneli', 'Esneklik', 'colored-coordination', 'from-purple-400 to-violet-400')" class="w-full text-left bg-white border border-slate-150 p-3 rounded-2xl flex items-center justify-between hover:border-amber-200 group active:scale-[0.98] transition-all">
+                <div class="flex gap-3 items-center">
+                  <div class="p-2.5 rounded-xl bg-gradient-to-tr from-purple-400 to-violet-400 text-white shrink-0">🌐</div>
+                  <div>
+                    <h4 class="font-display font-bold text-xs text-slate-800 group-hover:text-amber-650 transition-colors">Çember Tüneli</h4>
+                    <p class="text-[10px] text-slate-400 leading-normal">Çevik emekleme & esneklik tünel akışı</p>
+                  </div>
+                </div>
+                <span class="text-amber-500 bg-amber-50 p-1 rounded-lg hover:bg-amber-100">+</span>
+              </button>
+
+              <!-- Button 5 -->
+              <button onclick="addElementToCourse('Çeviklik Labirenti', 'Çeviklik', 'colored-agility', 'from-pink-400 to-rose-400')" class="w-full text-left bg-white border border-slate-150 p-3 rounded-2xl flex items-center justify-between hover:border-amber-200 group active:scale-[0.98] transition-all">
+                <div class="flex gap-3 items-center">
+                  <div class="p-2.5 rounded-xl bg-gradient-to-tr from-pink-400 to-rose-400 text-white shrink-0">🔄</div>
+                  <div>
+                    <h4 class="font-display font-bold text-xs text-slate-800 group-hover:text-amber-650 transition-colors">Çeviklik Labirenti</h4>
+                    <p class="text-[10px] text-slate-400 leading-normal">Mini kukalar arası reaksiyonlu zikzak koşu</p>
+                  </div>
+                </div>
+                <span class="text-amber-500 bg-amber-50 p-1 rounded-lg hover:bg-amber-100">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Right: Canvas / Active Seans planı -->
+        <div class="lg:col-span-7 flex flex-col gap-6">
+          <div class="bg-white border border-slate-100 rounded-[32px] p-6 shadow-xl shadow-amber-900/5 relative">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-amber-50 pb-4 mb-6">
+              <div>
+                <h3 class="font-display font-black text-lg text-slate-900 tracking-tight">AKTİF SEANS PLANI</h3>
+                <p class="font-sans text-[10px] text-slate-500 mt-0.5">Yaş Grubu: <span id="builder-selected-age" class="font-bold text-orange-500">3-5 Yaş</span> | Gözetim: Kesintisiz Gözlem</p>
+              </div>
+              
+              <button onclick="clearActiveBuilder()" class="text-[10px] font-display font-bold uppercase tracking-wider text-rose-500 hover:bg-rose-50 border border-rose-100 py-1.5 px-3 rounded-lg transition-colors cursor-pointer">Temizle</button>
+            </div>
+
+            <!-- Interactive Active Items Flow (Swappable via Vanilla JS) -->
+            <div id="course-builder-flow-container" class="space-y-3.5">
+              <!-- Dynamically populated or default empty placeholder -->
+              <div id="course-builder-placeholder" class="min-h-[220px] flex flex-col items-center justify-center text-center p-8 bg-slate-50/50 rounded-2xl border border-dashed border-amber-200">
+                <div class="h-12 w-12 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center mb-4">🤸‍♂️</div>
+                <h4 class="font-heading font-bold text-sm text-slate-700">Parkur Sıralaması Henüz Boş</h4>
+                <p class="font-sans text-xs text-slate-500 max-w-xs mt-1">
+                  Sol paneldeki istasyon elemanlarına tıklayarak çocukları sırayla yönlendireceğiniz parkur basamaklarını eklemeye başlayın. Maximum 7 eleman ekleyebilirsiniz.
+                </p>
+              </div>
+
+              <!-- List container for items -->
+              <div id="active-elements-list" class="space-y-3 hidden"></div>
+            </div>
+
+            <!-- Simulated live metrics of builder -->
+            <div id="builder-metrics-card" class="hidden grid grid-cols-1 md:grid-cols-2 gap-6 bg-amber-50/25 border border-amber-100 rounded-[24px] p-5 mb-6 mt-6">
+              <div>
+                <h4 class="font-display font-bold text-[10px] text-slate-400 uppercase tracking-widest block mb-3">YAŞA GÖRE MOTOR GELİŞİM DEĞERLERİ</h4>
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="bg-white/85 p-3 rounded-xl border border-amber-100/50">
+                    <span class="text-3xs font-extrabold text-slate-400 block uppercase">Tahmini Süre</span>
+                    <span id="metric-duration" class="font-display font-black text-lg text-slate-800">5 Dk</span>
+                    <span class="text-4xs text-slate-400 block">Isınma & Esneme Dahil</span>
+                  </div>
+                  <div class="bg-white/85 p-3 rounded-xl border border-amber-100/50">
+                    <span class="text-3xs font-extrabold text-slate-400 block uppercase">Zorluk Skoru</span>
+                    <span id="metric-difficulty" class="font-display font-black text-lg text-amber-600">Düşük</span>
+                    <span class="text-4xs text-amber-500/80 block uppercase">Pedagojik Limit</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col justify-end">
+                <span class="text-3xs font-extrabold text-slate-400 uppercase tracking-widest block mb-2">Ağırlıklı Motor Kazanımları</span>
+                <div class="flex flex-col gap-1.5" id="metric-tags">
+                  <span class="text-[10px] bg-sky-50 text-sky-800 font-bold px-2 py-0.5 rounded">Koordinasyon & Esneklik Akışı</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dynamic Simulator trigger -->
+            <div id="builder-generator-area" class="hidden border-t border-slate-100 pt-6 mt-6">
+              <button onclick="triggerBuilderSimulation()" class="w-full flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white py-4 rounded-[20px] font-display font-bold text-sm shadow-md transition-all">
+                🌟 Parkuru Onayla & Müfredat Raporu Al
+              </button>
+            </div>
+
+            <!-- Live Success Simulation Rapor card -->
+            <div id="simulation-report-card" class="hidden p-4 bg-emerald-50/60 border border-emerald-100 rounded-2xl flex gap-3.5 items-start mt-4">
+              <span class="text-emerald-500 text-lg">✓</span>
+              <div>
+                <h4 class="font-display font-bold text-xs text-emerald-900 uppercase tracking-wider">Parkur Başarıyla Taslaklaştırıldı</h4>
+                <p id="simulation-report-text" class="font-sans text-3xs text-slate-600 leading-relaxed mt-1">
+                  Mükemmel! Planlama onaylandı.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Code-Transposed printable CV view -->
+  <section id="resume" class="py-20 bg-white border-b border-slate-100 select-none no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-amber-700 font-display font-extrabold text-xs uppercase tracking-widest bg-amber-100 px-4 py-1.5 rounded-full inline-block mb-3 border border-amber-200/50">
+          DİJİTAL PRİZMA
+        </span>
+        <h2 class="font-display font-black text-4xl text-slate-900 mb-3 tracking-tight">Orijinal Yazdırılabilir CV</h2>
+        <p class="font-sans text-sm sm:text-base text-slate-600">
+          Kurum müdürlükleri, koordinatörler ve veliler için hazırlanmış, tarayıcı dostu, tamamen özelleştirilebilir ve yazdırılabilir A4 CV.
+        </p>
+      </div>
+
+      <!-- Resume Builder Panel -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Customization Menu (no-print) -->
+        <div class="lg:col-span-4 flex flex-col gap-6">
+          <div class="bg-[#FFFBEB] border border-slate-100 rounded-[32px] p-6 shadow-xl shadow-amber-900/5">
+            <h3 class="font-display font-extrabold text-base text-slate-900 mb-4 flex items-center gap-2">
+              <span class="text-amber-500">⚙</span>
+              <span>MİZANPAJ AYARLARI</span>
+            </h3>
+
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="font-display font-bold text-xs text-slate-800 block">Vesikalık Fotoğraf</span>
+                  <span class="font-sans text-[10px] text-slate-400">Resmi A4 şablonuna vesikalık ekler</span>
+                </div>
+                <input type="checkbox" id="cv-toggle-photo" checked onchange="toggleCVPhoto()" class="h-5 w-5 text-amber-500 border-slate-300 rounded cursor-pointer">
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="font-display font-bold text-xs text-slate-800 block">Sertifikalar Paneli</span>
+                  <span class="font-sans text-[10px] text-slate-400">Federasyon diplomalarını listele</span>
+                </div>
+                <input type="checkbox" id="cv-toggle-cert" checked onchange="toggleCVCert()" class="h-5 w-5 text-amber-500 border-slate-300 rounded cursor-pointer">
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="font-display font-bold text-xs text-slate-800 block">Yumuşak Tipografi</span>
+                  <span class="font-sans text-[10px] text-slate-400">Mizanpajı modern yuvarlak font yapar</span>
+                </div>
+                <input type="checkbox" id="cv-toggle-font" onchange="toggleCVFont()" class="h-5 w-5 text-amber-500 border-slate-300 rounded cursor-pointer">
+              </div>
+            </div>
+
+            <!-- Print Trigger action button -->
+            <div class="pt-6 border-t border-slate-200 mt-6 space-y-3">
+              <button onclick="window.print()" class="w-full flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white py-3.5 rounded-[20px] font-display font-bold text-sm shadow-md transition-all cursor-pointer">
+                🖨️ Yazdır veya PDF Olarak Kaydet
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-amber-50/40 border border-amber-100/50 rounded-[24px] p-5 flex gap-3.5 items-start">
+            <span class="text-amber-500 text-xl">📄</span>
+            <div>
+              <h4 class="font-display font-bold text-xs text-amber-900">Kurumlar İçin Mükemmel Özet</h4>
+              <p class="font-sans text-[11px] text-slate-600 leading-relaxed mt-1">
+                Eğer bir anaokulu müdürü iseniz, bu sayfa Turan Baran Şahin'in resmi antrenörlük belgelerini ve tecrübelerini sunan A4 özetidir. Ayarları yaptıktan sonra sayfayı yazdırmanız yeterlidir.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- A4 Frame Paper Representation -->
+        <div class="lg:col-span-8 bg-slate-50 p-4 md:p-8 rounded-[32px] border border-slate-200 overflow-x-auto">
+          
+          <div id="printable-a4-sheet" class="w-full min-w-[640px] max-w-[800px] mx-auto bg-white border border-slate-200 shadow-2xl p-10 min-h-[1100px] text-slate-800 relative select-text transition-all">
+            
+            <!-- CV Header -->
+            <div class="flex justify-between items-start border-b-2 border-slate-900 pb-6 mb-8 gap-6">
+              <div>
+                <h1 id="cv-font-title" class="text-4xl font-display font-black tracking-tighter text-slate-900 leading-none">
+                  TURAN BARAN <br>
+                  <span class="text-[#F59E0B]">ŞAHİN</span>
+                </h1>
+                <p class="mt-3 text-sm font-semibold text-slate-500 uppercase tracking-widest font-display">Çocuk Gelişimi & Egzersiz Uzmanı</p>
+                
+                <div class="flex flex-wrap gap-x-5 gap-y-1.5 mt-4 text-xs text-slate-600">
+                  <span>✉ tbaransahin44@gmail.com</span>
+                  <span>📍 İstanbul, Türkiye</span>
+                  <span>📱 +90 530 000 00 00</span>
+                </div>
+              </div>
+
+              <!-- Photo Box togglable -->
+              <div id="cv-photo-box" class="w-24 h-24 bg-slate-100 rounded-xl border border-slate-200 flex items-center justify-center text-slate-300 font-mono text-[9px] text-center p-1">
+                [Vesikalık Fotoğraf]
+              </div>
+            </div>
+
+            <!-- Profile Overview (Bio) -->
+            <div class="mb-8">
+              <h3 class="text-xs font-display font-black text-slate-900 uppercase tracking-widest border-b border-slate-250 pb-1 mb-3">EĞİTMEN ÖZETİ</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Marmara Üniversitesi Beden Eğitimi altyapısıyla erken çocukluk pedagojisini harmanlamış erken yaş hareket eğitmeni. 1500'ü aşkın kreş ve anaokulu öğrencisinin kaba motor gelişimini yaralanmasız biçimde yönetmiş yüksek güvenlik odaklı antrenörlük vizyonu.
+              </p>
+            </div>
+
+            <!-- Timelines / Experience -->
+            <div class="mb-8">
+              <h3 class="text-xs font-display font-black text-slate-900 uppercase tracking-widest border-b border-slate-250 pb-1 mb-4">DENEYİMLER</h3>
+              
+              <div class="space-y-4">
+                <div>
+                  <div class="flex justify-between items-baseline">
+                    <h4 class="text-xs font-bold text-slate-900">Anaokulu Spor Koordinatörü & Hareket Eğitmeni</h4>
+                    <span class="text-3xs font-semibold text-slate-500 font-mono">2024 - Günümüz</span>
+                  </div>
+                  <p class="text-3xs text-slate-400 font-medium font-mono uppercase">Neşeli Adımlar Anaokulu & Kids Gym • İstanbul</p>
+                  <p class="text-3xs text-slate-600 leading-relaxed mt-1">3-6 yaş gruplarına özel haftalık parkur ve oyun müfredatlarının tasarımı, motor becerilerinin karne planlaması.</p>
+                </div>
+
+                <div>
+                  <div class="flex justify-between items-baseline">
+                    <h4 class="text-xs font-bold text-slate-900">Temel Jimnastik Antrenörü</h4>
+                    <span class="text-3xs font-semibold text-slate-500 font-mono">2022 - 2024</span>
+                  </div>
+                  <p class="text-3xs text-slate-400 font-medium font-mono uppercase">Olimpik Çocuk Cimnastik Kulübü • İstanbul</p>
+                  <p class="text-3xs text-slate-600 leading-relaxed mt-1">Esneklik, kas kuvveti ve eklemleri zorlamayan postür ve omurga esnetme serilerinin sıfır hata ile uygulanması.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education -->
+            <div class="mb-8">
+              <h3 class="text-xs font-display font-black text-slate-900 uppercase tracking-widest border-b border-slate-250 pb-1 mb-3">PEDAGOJİK AKADEMİK ALTYAPI</h3>
+              <div class="flex justify-between items-baseline">
+                <h4 class="text-xs font-bold text-slate-900 font-display">Beden Eğitimi ve Spor Öğretmenliği Lisansı</h4>
+                <span class="text-3xs font-semibold text-slate-500 font-mono">2019 - 2023</span>
+              </div>
+              <p class="text-3xs text-slate-400 font-medium font-mono uppercase">Marmara Üniversitesi Spor Bilimleri Fakültesi</p>
+            </div>
+
+            <!-- Togglable Certifications Box -->
+            <div id="cv-certs-panel" class="mb-6">
+              <h3 class="text-xs font-display font-black text-slate-900 uppercase tracking-widest border-b border-slate-250 pb-1 mb-3">MESLEKİ LİSANSLAR</h3>
+              <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-2xs">
+                <div>
+                   <span class="font-bold block text-slate-800">● 1. Kademe Yardımcı Antrenörlük</span>
+                   <span class="text-3xs text-slate-500 block">Türkiye Cimnastik Federasyonu</span>
+                </div>
+                <div>
+                   <span class="font-bold block text-slate-800">● Hareket ve Oyun Eğitmenliği</span>
+                   <span class="text-3xs text-slate-500 block">Uluslararası Çocuk Değerleri Derneği / MESYO</span>
+                </div>
+                <div>
+                  <span class="font-bold block text-slate-800">● Davranış Yönetimi Eğitimi</span>
+                  <span class="text-3xs text-slate-500 block">İstanbul Akademi Enstitüsü</span>
+                </div>
+                <div>
+                  <span class="font-bold block text-slate-800">● İlk Yardım & Temel Yaşam Desteği</span>
+                  <span class="text-3xs text-slate-500 block">Yasal Türk Kızılayı Standartları</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Contact Form with Local Logs -->
+  <section id="contact" class="py-20 bg-[#FFFBEB] border-b border-amber-100/50 no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-amber-700 font-display font-extrabold text-xs uppercase tracking-widest bg-amber-150px bg-amber-100 px-4 py-1.5 rounded-full inline-block mb-3 border border-amber-200/50       ">
+          HIZLI İLETİŞİM
+        </span>
+        <h2 class="font-display font-black text-4xl text-slate-900 mb-3 tracking-tight">Hemen Bağlantı Kurun</h2>
+        <p class="font-sans text-sm sm:text-base text-slate-600 font-normal">
+          Anaokulu müfredatları, kurumsal entegrasyon veya bireysel seanslar hakkında bilgi almak için formu doldurabilir veya doğrudan sosyal ağlardan ulaşabilirsiniz.
+        </p>
+      </div>
+
+      <!-- Outer Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-6xl mx-auto items-stretch">
+        
+        <!-- Left Contacts Details Panel -->
+        <div class="lg:col-span-5 flex flex-col justify-between bg-white border border-slate-100 rounded-[32px] p-6 md:p-8 shadow-xl shadow-amber-900/5">
+          <div class="space-y-6">
+            <h3 class="font-display font-black text-xl text-slate-950 tracking-tight">İletişim Kanalları</h3>
+            <p class="font-sans text-xs text-slate-500">Doğrudan e-posta göndererek profesyonel sözleşme detayları isteyebilirsiniz.</p>
+            
+            <div class="space-y-4">
+              <div class="flex gap-3 text-xs">
+                <span class="text-lg">📧</span>
+                <div>
+                  <span class="block text-slate-500">Elektronik Posta</span>
+                  <span class="font-display font-bold text-slate-800">tbaransahin44@gmail.com</span>
+                </div>
+              </div>
+              <div class="flex gap-3 text-xs">
+                <span class="text-lg">📍</span>
+                <div>
+                  <span class="block text-slate-500">Operasyon Lokasyonu</span>
+                  <span class="font-display font-bold text-slate-800">İstanbul, Türkiye</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-t border-slate-100 pt-6 mt-8 space-y-3.5">
+            <span class="font-display font-extrabold text-[10px] uppercase text-slate-400 tracking-wider">Sosyal Medya Medyaları:</span>
+            <div class="flex gap-3">
+              <a href="https://linkedin.com/in/turan-baran-sahin" target="_blank" class="bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs px-4 py-2 rounded-xl border border-slate-100 font-semibold flex items-center gap-1.5 transition-colors">
+                🔗 LINKEDIN
+              </a>
+              <a href="https://instagram.com/turanbaransahin" target="_blank" class="bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs px-4 py-2 rounded-xl border border-slate-100 font-semibold flex items-center gap-1.5 transition-colors">
+                📸 INSTAGRAM
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Interaction form -->
+        <div class="lg:col-span-7 bg-white border border-slate-100 rounded-[32px] p-6 md:p-8 shadow-xl shadow-amber-900/5">
+          
+          <form id="contact-form" onsubmit="handleContactFormSubmit(event)" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="font-display font-bold text-xs text-slate-700 block mb-1">Adınız Soyadınız *</label>
+                <input type="text" id="contact-name" required placeholder="ör. Esra Yıldız" class="w-full text-xs p-3 rounded-xl border border-slate-150 outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-200">
+              </div>
+              <div>
+                <label class="font-display font-bold text-xs text-slate-700 block mb-1">Telefon Numaranız *</label>
+                <input type="tel" id="contact-phone" required placeholder="ör. 05XX XXX XX XX" class="w-full text-xs p-3 rounded-xl border border-slate-150 outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-200">
+              </div>
+            </div>
+
+            <div>
+              <label class="font-display font-bold text-xs text-slate-700 block mb-1">E-posta Adresiniz *</label>
+              <input type="email" id="contact-email" required placeholder="ör. yonetim@anaokulu.com" class="w-full text-xs p-3 rounded-xl border border-slate-150 outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-200">
+            </div>
+
+            <div>
+              <label class="font-display font-bold text-xs text-slate-700 block mb-1">Mesajınız / İş Teklifiniz *</label>
+              <textarea id="contact-msg" required placeholder="Kreş spor saatleri veya özel program taleplerini buraya yazabilirsiniz..." rows="4" class="w-full text-xs p-3 rounded-xl border border-slate-150 outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-200"></textarea>
+            </div>
+
+            <!-- Submit action -->
+            <button type="submit" class="w-full flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white py-4 rounded-[20px] font-display font-bold text-sm shadow-md transition-all cursor-pointer">
+              Başvuruyu Gönder (Local Kaydet) ➜
+            </button>
+          </form>
+
+          <!-- Contact Error/Notification simulated banners -->
+          <div id="contact-error" class="hidden p-4 bg-rose-50 border border-rose-100 rounded-2xl flex gap-3 items-start mt-4">
+            <span class="text-rose-500 text-sm">⚠️</span>
+            <div>
+              <h4 class="font-display font-bold text-xs text-rose-800">Eksik Alanlar!</h4>
+              <p id="contact-error-text" class="font-sans text-3xs text-rose-700 mt-1">Lütfen alanları eksiksiz doldurun.</p>
+            </div>
+          </div>
+
+          <div id="contact-success" class="hidden p-4 bg-emerald-50 border border-emerald-100 rounded-2xl flex gap-3 items-start mt-4">
+            <span class="text-emerald-500 text-sm">✓</span>
+            <div>
+              <h4 class="font-display font-bold text-xs text-emerald-800">Başvurunuz Taslaklaştırıldı!</h4>
+              <p class="font-sans text-3xs text-emerald-700 mt-1">İletişim talebiniz tarayıcınızın hafızasına başarıyla kaydedilmiştir. Aşağıdaki dinamik log listesinden inceleyebilirsiniz.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Live Inbox Log representation on LocalStorage content -->
+      <div id="contact-inbox-section" class="hidden max-w-6xl mx-auto mt-16 bg-white border border-slate-100 rounded-[32px] p-6 md:p-8 shadow-xl shadow-amber-900/5">
+        <div class="flex justify-between items-center border-b border-slate-50 pb-4 mb-4">
+          <div>
+            <h3 class="font-display font-black text-base text-slate-900 flex items-center gap-2">
+              <span class="text-emerald-500">📥</span>
+              <span>Kayıtlı İletişim Talepleriniz (<span id="inbox-count">0</span>)</span>
+            </h3>
+            <p class="font-sans text-[10px] text-slate-500 mt-0.5">Bu veriler sadece sizin tarayıcınızda (localStorage) saklanır, dış sunuculara aktarılmaz.</p>
+          </div>
+          <button onclick="clearContactLogLocalStorage()" class="text-3xs font-display font-bold text-red-500 hover:bg-rose-50 border border-red-100 py-1.5 px-3 rounded-lg transition-colors cursor-pointer">
+            Temizle
+          </button>
+        </div>
+
+        <div id="contact-inbox-list" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Dynamic logs generated below -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Static/Printed Footer block -->
+  <footer class="bg-slate-900 text-white py-12 px-6 sm:px-12 mt-auto">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <p class="text-xs tracking-widest font-medium text-slate-400">TURAN BARAN ŞAHİN © 2026 • DİJİTAL PORTFOLYO</p>
+        <p class="text-[10px] text-slate-500 mt-1">Bu sayfa GitHub Pages için uygun, statik HTML ve modern CSS ile tasarlanmıştır.</p>
+      </div>
+      <div class="flex gap-8 text-xs font-black tracking-widest">
+        <a href="https://linkedin.com/in/turan-baran-sahin" target="_blank" class="hover:text-[#F59E0B]">LINKEDIN</a>
+        <a href="https://instagram.com/turanbaransahin" target="_blank" class="hover:text-[#F59E0B]">INSTAGRAM</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DYNAMIC LOGIC SCRIPT (Provides rich interactivity on GitHub Pages static deployment) -->
+  <script>
+    // Navigation bar Menu toggle on smaller interfaces
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // 1. Dynamic Tabs of Section 2 (About me)
+    function switchTab(tabId, el) {
+      // Toggle buttons CSS
+      const buttons = document.querySelectorAll('.tab-btn');
+      buttons.forEach(btn => {
+        btn.className = "tab-btn px-5 py-2.5 rounded-xl font-display font-bold text-sm transition-all shrink-0 focus:outline-none text-slate-500 hover:text-slate-800";
+      });
+      el.className = "tab-btn px-5 py-2.5 rounded-xl font-display font-bold text-sm transition-all shrink-0 focus:outline-none bg-slate-950 text-white shadow-xs";
+
+      // Toggle contents visibility
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => {
+        content.classList.add('hidden');
+      });
+      document.getElementById(tabId).classList.remove('hidden');
+    }
+
+    // 2. Dynamic interactive Gym Station Builder Logic
+    let activeElements = [];
+    let builderAgeGroup = "3-5 Yaş";
+    
+    function setBuilderAge(age, btn) {
+      builderAgeGroup = age;
+      document.getElementById('builder-selected-age').innerText = age;
+      
+      const buttons = document.querySelectorAll('.builder-age-btn');
+      buttons.forEach(b => {
+        b.className = "builder-age-btn py-2 px-3 rounded-xl font-display font-bold text-xs border bg-white text-slate-600 border-slate-100 hover:border-amber-200";
+      });
+      btn.className = "builder-age-btn py-2 px-3 rounded-xl font-display font-bold text-xs border bg-slate-900 text-white border-slate-900";
+      
+      // Clear alert and report if updated
+      document.getElementById('builder-alert').classList.add('hidden');
+      document.getElementById('simulation-report-card').classList.add('hidden');
+      calculateBuilderStats();
+    }
+
+    function addElementToCourse(name, category, customClass, gradient) {
+      if (activeElements.length >= 7) {
+        showBuilderAlert('Güvenli bir çocuk ders akışı için maksimum 7 istasyon elemanı ekleyebilirsiniz!');
+        return;
+      }
+      
+      const uniqueId = 'el-' + Date.now() + '-' + Math.floor(Math.random() * 100);
+      activeElements.push({ id: uniqueId, name, category, customClass, gradient });
+      
+      renderActiveElements();
+      calculateBuilderStats();
+    }
+
+    function removeElementFromCourse(uniqueId) {
+      activeElements = activeElements.filter(el => el.id !== uniqueId);
+      renderActiveElements();
+      calculateBuilderStats();
+    }
+
+    function clearActiveBuilder() {
+      activeElements = [];
+      renderActiveElements();
+      calculateBuilderStats();
+    }
+
+    function renderActiveElements() {
+      const container = document.getElementById('active-elements-list');
+      const placeholder = document.getElementById('course-builder-placeholder');
+      const metricsCard = document.getElementById('builder-metrics-card');
+      const genArea = document.getElementById('builder-generator-area');
+      const reportCard = document.getElementById('simulation-report-card');
+      
+      reportCard.classList.add('hidden');
+      
+      if (activeElements.length === 0) {
+        container.classList.add('hidden');
+        placeholder.classList.remove('hidden');
+        metricsCard.classList.add('hidden');
+        genArea.classList.add('hidden');
+        return;
+      }
+      
+      placeholder.classList.add('hidden');
+      container.classList.remove('hidden');
+      metricsCard.classList.remove('hidden');
+      genArea.classList.remove('hidden');
+      
+      container.innerHTML = '';
+      activeElements.forEach((el, index) => {
+        const itemHtml = `
+          <div class="bg-slate-50/60 border border-slate-100 p-3 rounded-2xl flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+              <span class="font-display font-black text-sm text-slate-900 bg-amber-100 h-7 w-7 rounded-lg flex items-center justify-center border border-amber-200/50">
+                ${index + 1}
+              </span>
+              <div>
+                <h4 class="text-xs font-bold text-slate-850 font-display">${el.name}</h4>
+                <p class="text-[10px] text-slate-400 font-medium font-mono uppercase tracking-wider">${el.category} istasyonu</p>
+              </div>
+            </div>
+            <button onclick="removeElementFromCourse('${el.id}')" class="text-xs bg-rose-50 text-rose-500 hover:bg-rose-100 h-7 w-7 rounded-lg flex items-center justify-center transition-colors">🗑</button>
+          </div>
+        `;
+        container.innerHTML += itemHtml;
+      });
+    }
+
+    function calculateBuilderStats() {
+      if (activeElements.length === 0) return;
+      
+      let durationSum = 10; // basic warm-up
+      activeElements.forEach(el => {
+        durationSum += 5;
+      });
+      
+      document.getElementById('metric-duration').innerText = durationSum + " Dk";
+      
+      let diff = "Düşük";
+      if (activeElements.length > 5) {
+        diff = "İleri (Gözetimli)";
+      } else if (activeElements.length > 3) {
+        diff = "Orta Seviye";
+      }
+      document.getElementById('metric-difficulty').innerText = diff;
+
+      // Update kazanım tags dynamically
+      const tagsContainer = document.getElementById('metric-tags');
+      tagsContainer.innerHTML = '';
+      
+      let categories = activeElements.map(el => el.category);
+      if (categories.includes('Agility') || categories.includes('Çeviklik')) {
+        tagsContainer.innerHTML += `<span class="text-[9px] bg-amber-50 text-amber-800 font-bold px-2 py-0.5 rounded w-max">🚀 Reaksiyon & Ani Sıçramalar</span>`;
+      }
+      if (categories.includes('Denge')) {
+        tagsContainer.innerHTML += `<span class="text-[9px] bg-emerald-50 text-emerald-800 font-bold px-2 py-0.5 rounded w-max mt-1">🧭 Statik/Dinamik Vestibular Koruma</span>`;
+      }
+      if (categories.includes('Jimnastik')) {
+        tagsContainer.innerHTML += `<span class="text-[9px] bg-sky-50 text-sky-800 font-bold px-2 py-0.5 rounded w-max mt-1">🤸‍♀️ Pedagojik Omurga Esnetme Akışı</span>`;
+      }
+    }
+
+    function showBuilderAlert(text) {
+      const alert = document.getElementById('builder-alert');
+      document.getElementById('builder-alert-text').innerText = text;
+      alert.classList.remove('hidden');
+      setTimeout(() => alert.classList.add('hidden'), 5000);
+    }
+
+    function triggerBuilderSimulation() {
+      const reportCard = document.getElementById('simulation-report-card');
+      const text = document.getElementById('simulation-report-text');
+      
+      text.innerText = `Mükemmel! ${builderAgeGroup} grubunun psikomotor gelişim basamaklarına özel ${activeElements.length} aşamalı hareket parkuru simülasyonu onaylandı. Isınma süresi dahil toplam ${document.getElementById('metric-duration').innerText} dakikalık yüksek kontrollü ders planı hazırlandı.`;
+      
+      reportCard.classList.remove('hidden');
+    }
+
+    // 3. Dynamic Printable CV toggles
+    function toggleCVPhoto() {
+      const isChecked = document.getElementById('cv-toggle-photo').checked;
+      const box = document.getElementById('cv-photo-box');
+      if (isChecked) {
+        box.style.display = "flex";
+      } else {
+        box.style.display = "none";
+      }
+    }
+
+    function toggleCVCert() {
+      const isChecked = document.getElementById('cv-toggle-cert').checked;
+      const certsPanel = document.getElementById('cv-certs-panel');
+      if (isChecked) {
+        certsPanel.style.display = "block";
+      } else {
+        certsPanel.style.display = "none";
+      }
+    }
+
+    function toggleCVFont() {
+      const isChecked = document.getElementById('cv-toggle-font').checked;
+      const sheet = document.getElementById('printable-a4-sheet');
+      if (isChecked) {
+        sheet.style.fontFamily = '"Outfit", "Inter", sans-serif';
+      } else {
+        sheet.style.fontFamily = '"Inter", sans-serif';
+      }
+    }
+
+    // 4. Dynamic Local Storage Contact Logs (No simulation, actual read-write)
+    function handleContactFormSubmit(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('contact-name').value;
+      const phone = document.getElementById('contact-phone').value;
+      const email = document.getElementById('contact-email').value;
+      const message = document.getElementById('contact-msg').value;
+      
+      if (!name || !phone || !email || !message) {
+        const err = document.getElementById('contact-error');
+        err.classList.remove('hidden');
+        setTimeout(() => err.classList.add('hidden'), 5000);
+        return;
+      }
+      
+      const newProposal = {
+        name,
+        phone,
+        email,
+        message,
+        date: new Date().toLocaleDateString('tr-TR')
+      };
+      
+      let currentProposals = JSON.parse(localStorage.getItem('turan_baran_contact_proposals')) || [];
+      currentProposals.unshift(newProposal);
+      localStorage.setItem('turan_baran_contact_proposals', JSON.stringify(currentProposals));
+      
+      // Clear inputs
+      document.getElementById('contact-name').value = '';
+      document.getElementById('contact-phone').value = '';
+      document.getElementById('contact-email').value = '';
+      document.getElementById('contact-msg').value = '';
+      
+      const successBanner = document.getElementById('contact-success');
+      successBanner.classList.remove('hidden');
+      setTimeout(() => successBanner.classList.add('hidden'), 5000);
+      
+      renderContactProposalsInbox();
+    }
+
+    function renderContactProposalsInbox() {
+      const inboxSection = document.getElementById('contact-inbox-section');
+      const inboxList = document.getElementById('contact-inbox-list');
+      const inboxCount = document.getElementById('inbox-count');
+      
+      const list = JSON.parse(localStorage.getItem('turan_baran_contact_proposals')) || [];
+      inboxCount.innerText = list.length;
+      
+      if (list.length === 0) {
+        inboxSection.classList.add('hidden');
+        return;
+      }
+      
+      inboxSection.classList.remove('hidden');
+      inboxList.innerHTML = '';
+      
+      list.forEach(item => {
+        const itemHtml = `
+          <div class="bg-slate-50 border border-slate-100 p-4 rounded-2xl flex flex-col justify-between hover:border-amber-300 transition-colors">
+            <div class="space-y-2">
+              <div class="flex justify-between items-start gap-2">
+                <h4 class="font-display font-extrabold text-xs text-slate-900 leading-tight">${item.name}</h4>
+                <span class="text-[9px] font-mono text-slate-400 shrink-0">${item.date}</span>
+              </div>
+              <p class="text-3xs text-slate-500 font-mono text-slate-500/90 leading-tight">📍 Tel: ${item.phone} | ✉ ${item.email}</p>
+              <p class="text-3xs text-slate-600 leading-relaxed mt-2 italic">"${item.message}"</p>
+            </div>
+            <div class="flex justify-end gap-1.5 border-t border-slate-150 pt-2.5 mt-3">
+              <span class="text-[8px] bg-emerald-50 text-emerald-800 font-black px-2 py-0.5 rounded tracking-wide uppercase">Cevap Bekliyor (Local)</span>
+            </div>
+          </div>
+        `;
+        inboxList.innerHTML += itemHtml;
+      });
+    }
+
+    function clearContactLogLocalStorage() {
+      if (confirm('Tüm kayıtlı yerel mesajları silmek istediğinizden emin misiniz?')) {
+        localStorage.removeItem('turan_baran_contact_proposals');
+        renderContactProposalsInbox();
+      }
+    }
+
+    // Initialize metrics and list logs on dom loading complete
+    window.addEventListener('DOMContentLoaded', () => {
+      renderContactProposalsInbox();
+    });
+  </script>
 </body>
 </html>
