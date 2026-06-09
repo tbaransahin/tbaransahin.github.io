@@ -1,292 +1,256 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Turan Baran Şahin | Hareket Eğitimi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turan Baran Şahin | Temel Hareket ve Jimnastik Eğitmeni</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF6B6B;
+            --secondary: #4ECDC4;
+            --accent: #FFE66D;
+            --dark: #292F36;
+            --light: #F7FFF7;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
 
-body{
-background:#f5f7fb;
-color:#0f172a;
-line-height:1.6;
-}
+        header {
+            background: linear-gradient(135deg, var(--secondary), #2AB7CA);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            margin-bottom: 2rem;
+        }
 
-a{
-text-decoration:none;
-color:inherit;
-}
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
 
-.container{
-width:90%;
-max-width:1100px;
-margin:auto;
-}
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
 
-/* NAV */
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:white;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-z-index:999;
-}
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
 
-.nav-inner{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 0;
-}
+        .title-tag {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+        }
 
-.logo{
-font-weight:700;
-color:#2563eb;
-}
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
 
-.nav-links a{
-margin-left:20px;
-font-weight:500;
-color:#334155;
-}
+        section {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 6px solid var(--secondary);
+        }
 
-.nav-links a:hover{
-color:#2563eb;
-}
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
-/* HERO */
-.hero{
-padding:120px 0 80px;
-background:linear-gradient(135deg,#2563eb,#06b6d4);
-color:white;
-text-align:center;
-}
+        p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
 
-.hero h1{
-font-size:2.8rem;
-margin-bottom:10px;
-}
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
 
-.hero p{
-font-size:1.1rem;
-opacity:0.95;
-}
+        .service-card {
+            background: #fdfdfd;
+            border: 2px solid #eee;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
 
-.buttons{
-margin-top:25px;
-}
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
 
-.btn{
-display:inline-block;
-padding:12px 22px;
-border-radius:30px;
-background:white;
-color:#2563eb;
-font-weight:600;
-margin:5px;
-transition:0.3s;
-}
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
 
-.btn:hover{
-transform:translateY(-3px);
-}
+        /* Timeline / Experience */
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 3px solid var(--primary);
+            margin-bottom: 1.5rem;
+        }
 
-/* SECTIONS */
-section{
-padding:70px 0;
-}
+        .timeline-date {
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
 
-.title{
-text-align:center;
-font-size:2rem;
-margin-bottom:40px;
-}
+        /* Footer / Contact */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            margin-top: -1rem;
+        }
 
-/* ABOUT */
-.about{
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
-}
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
 
-/* CARDS */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
+        .social-btn {
+            background: white;
+            color: var(--dark);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
 
-.card{
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 10px 20px rgba(0,0,0,0.05);
-transition:0.3s;
-}
+        .social-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.05);
+        }
 
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card span{
-font-size:40px;
-}
-
-/* GALLERY */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
-}
-
-.photo{
-height:180px;
-background:#dbeafe;
-border-radius:15px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:40px;
-}
-
-/* CONTACT */
-.contact{
-background:#0f172a;
-color:white;
-padding:50px;
-border-radius:15px;
-text-align:center;
-}
-
-.contact p{
-margin:8px 0;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:25px;
-color:#64748b;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-.hero h1{font-size:2rem;}
-.nav-links{display:none;}
-}
-</style>
+        @media (max-width: 768px) {
+            header { clip-path: none; }
+            footer { clip-path: none; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- NAV -->
-<nav>
-<div class="container nav-inner">
-<div class="logo">TBS</div>
-<div class="nav-links">
-<a href="#about">Hakkımda</a>
-<a href="#skills">Uzmanlık</a>
-<a href="#gallery">Galeri</a>
-<a href="#contact">İletişim</a>
-</div>
-</div>
-</nav>
+    <header>
+        <div class="hero-container">
+            <img src="https://images.unsplash.com/photo-1574607383276-66db8313dd36?w=500&auto=format&fit=crop&q=60" alt="Turan Baran Şahin" class="profile-img">
+            <h1>Turan Baran Şahin</h1>
+            <div class="title-tag">Çocuk Jimnastiği & Temel Hareket Eğitmeni</div>
+        </div>
+    </header>
 
-<!-- HERO -->
-<div class="hero">
-<h1>Turan Baran Şahin</h1>
-<p>Anaokulu Hareket Eğitimi • Temel Jimnastik • Motor Beceri Gelişimi</p>
+    <main>
+        <section>
+            <h2>Hakkımda 🙋‍♂️</h2>
+            <p>Merhaba! Ben Turan Baran Şahin. Çocukların fiziksel, zihinsel ve motor gelişimlerini desteklemek amacıyla anaokulu ve temel jimnastik alanlarında hareket eğitimi veriyorum. Sporu bir zorunluluk değil, oyun ve eğlence olarak ele alarak miniklerin özgüvenli bireyler olmalarına katkı sağlıyorum.</p>
+            <p>Esnek, dinamik ve yaş grubuna uygun oyunlaştırılmış antrenman metotlarımla çocukların sporu sevmesini ve temel hareket becerilerini (koşu, sıçrama, denge, esneklik) en doğru yaşta kazanmalarını hedefliyorum.</p>
+        </section>
 
-<div class="buttons">
-<a class="btn" href="#contact">İletişim</a>
-<a class="btn" href="#about">Hakkımda</a>
-</div>
-</div>
+        <section style="border-top-color: var(--primary);">
+            <h2>Çalışma Alanlarım 🎯</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🤸‍♂️</div>
+                    <h3>Temel Jimnastik</h3>
+                    <p>Vücut kontrolü, esneklik, denge ve temel jimnastik hareketlerinin yaş grubuna göre uyarlanması.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏫</div>
+                    <h3>Anaokulu Hareket Eğitimi</h3>
+                    <p>Okul öncesi kurumlara özel eğlenceli ve motor beceri odaklı spor programları.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎈</div>
+                    <h3>Oyun Temelli Spor</h3>
+                    <p>Kurallı oyunlar ve sportif aktivitelerle çocukların sosyalleşmesi ve enerjilerini doğru yönlendirmesi.</p>
+                </div>
+            </div>
+        </section>
 
-<!-- ABOUT -->
-<section id="about">
-<div class="container">
-<h2 class="title">Hakkımda</h2>
-<div class="about">
-<p>
-Çocukların fiziksel gelişimini destekleyen hareket eğitimi, temel jimnastik ve motor beceri çalışmaları üzerine uzmanlaşmış bir antrenörüm.  
-Amacım çocukların denge, koordinasyon, esneklik ve özgüven gelişimini oyun temelli eğitimlerle güçlendirmektir.
-</p>
-</div>
-</div>
-</section>
+        <section style="border-top-color: var(--accent);">
+            <h2>Deneyim & Eğitim 📜</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">2022 - Halen</div>
+                <h3>Bağımsız Hareket ve Jimnastik Eğitmeni</h3>
+                <p>Çeşitli anaokulları ve spor merkezlerinde temel hareket ve jimnastik dersleri.</p>
+            </div>
 
-<!-- SKILLS -->
-<section id="skills">
-<div class="container">
-<h2 class="title">Uzmanlık Alanlarım</h2>
+            <div class="timeline-item">
+                <div class="timeline-date">2021 - 2022</div>
+                <h3>Stajyer / Yardımcı Eğitmen</h3>
+                <p>Çocuk jimnastiği kampları ve temel hareket eğitimi programlarında aktif görev.</p>
+            </div>
 
-<div class="grid">
+            <div class="timeline-item">
+                <div class="timeline-date">2023</div>
+                <h3>Antrenörlük / Hareket Eğitimi Seminerleri</h3>
+                <p>Okul öncesi çocuklarda motor gelişim ve pedagojik yaklaşım sertifika programları.</p>
+            </div>
+        </section>
+    </main>
 
-<div class="card">
-<span>🏃</span>
-<h3>Hareket Eğitimi</h3>
-<p>Koordinasyon, denge ve temel motor beceriler.</p>
-</div>
-
-<div class="card">
-<span>🤸</span>
-<h3>Jimnastik</h3>
-<p>Esneklik, takla, denge ve vücut kontrolü.</p>
-</div>
-
-<div class="card">
-<span>🎯</span>
-<h3>Anaokulu Spor</h3>
-<p>Oyun temelli fiziksel aktivite programları.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery">
-<div class="container">
-<h2 class="title">Galeri</h2>
-
-<div class="gallery">
-<div class="photo">📸</div>
-<div class="photo">📸</div>
-<div class="photo">📸</div>
-<div class="photo">📸</div>
-</div>
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-<div class="container">
-<h2 class="title">İletişim</h2>
-
-<div class="contact">
-<p>📍 İstanbul, Türkiye</p>
-<p>📞 +90 5XX XXX XX XX</p>
-<p>📧 mail@example.com</p>
-<p>📸 Instagram: @instagram</p>
-</div>
-</div>
-</section>
-
-<footer>
-© 2026 Turan Baran Şahin | Tüm Hakları Saklıdır
-</footer>
+    <footer>
+        <h2>İletişimde Kalalım 📬</h2>
+        <p style="color: #ccc; max-width: 400px; margin: 0 auto;">Yeni projeler, anaokulu işbirlikleri veya ders talepleri için bana sosyal medya veya e-posta üzerinden ulaşabilirsiniz.</p>
+        <div class="social-links">
+            <a href="mailto:ornek@email.com" class="social-btn">E-posta</a>
+            <a href="https://instagram.com" class="social-btn" target="_blank">Instagram</a>
+            <a href="https://linkedin.com" class="social-btn" target="_blank">LinkedIn</a>
+        </div>
+        <p style="font-size: 0.8rem; margin-top: 3rem; opacity: 0.7;">© 2026 - Turan Baran Şahin</p>
+    </footer>
 
 </body>
 </html>
