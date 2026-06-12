@@ -710,90 +710,7 @@
       document.getElementById(tabId).classList.remove('hidden');
     }
 
-    // 4. Dynamic Local Storage Contact Logs (No simulation, actual read-write)
-    function handleContactFormSubmit(e) {
-      e.preventDefault();
-      
-      const name = document.getElementById('contact-name').value;
-      const phone = document.getElementById('contact-phone').value;
-      const email = document.getElementById('contact-email').value;
-      const message = document.getElementById('contact-msg').value;
-      
-      if (!name || !phone || !email || !message) {
-        const err = document.getElementById('contact-error');
-        err.classList.remove('hidden');
-        setTimeout(() => err.classList.add('hidden'), 5000);
-        return;
-      }
-      
-      const newProposal = {
-        name,
-        phone,
-        email,
-        message,
-        date: new Date().toLocaleDateString('tr-TR')
-      };
-      
-      let currentProposals = JSON.parse(localStorage.getItem('turan_baran_contact_proposals')) || [];
-      currentProposals.unshift(newProposal);
-      localStorage.setItem('turan_baran_contact_proposals', JSON.stringify(currentProposals));
-      
-      // Clear inputs
-      document.getElementById('contact-name').value = '';
-      document.getElementById('contact-phone').value = '';
-      document.getElementById('contact-email').value = '';
-      document.getElementById('contact-msg').value = '';
-      
-      const successBanner = document.getElementById('contact-success');
-      successBanner.classList.remove('hidden');
-      setTimeout(() => successBanner.classList.add('hidden'), 5000);
-      
-      renderContactProposalsInbox();
-    }
-
-    function renderContactProposalsInbox() {
-      const inboxSection = document.getElementById('contact-inbox-section');
-      const inboxList = document.getElementById('contact-inbox-list');
-      const inboxCount = document.getElementById('inbox-count');
-      
-      const list = JSON.parse(localStorage.getItem('turan_baran_contact_proposals')) || [];
-      inboxCount.innerText = list.length;
-      
-      if (list.length === 0) {
-        inboxSection.classList.add('hidden');
-        return;
-      }
-      
-      inboxSection.classList.remove('hidden');
-      inboxList.innerHTML = '';
-      
-      list.forEach(item => {
-        const itemHtml = `
-          <div class="bg-slate-50 border border-slate-100 p-4 rounded-2xl flex flex-col justify-between hover:border-amber-300 transition-colors">
-            <div class="space-y-2">
-              <div class="flex justify-between items-start gap-2">
-                <h4 class="font-display font-extrabold text-xs text-slate-900 leading-tight">${item.name}</h4>
-                <span class="text-[9px] font-mono text-slate-400 shrink-0">${item.date}</span>
-              </div>
-              <p class="text-3xs text-slate-500 font-mono text-slate-500/90 leading-tight">📍 Tel: ${item.phone} | ✉ ${item.email}</p>
-              <p class="text-3xs text-slate-600 leading-relaxed mt-2 italic">"${item.message}"</p>
-            </div>
-            <div class="flex justify-end gap-1.5 border-t border-slate-150 pt-2.5 mt-3">
-              <span class="text-[8px] bg-emerald-50 text-emerald-800 font-black px-2 py-0.5 rounded tracking-wide uppercase">Cevap Bekliyor (Local)</span>
-            </div>
-          </div>
-        `;
-        inboxList.innerHTML += itemHtml;
-      });
-    }
-
-    function clearContactLogLocalStorage() {
-      if (confirm('Tüm kayıtlı yerel mesajları silmek istediğinizden emin misiniz?')) {
-        localStorage.removeItem('turan_baran_contact_proposals');
-        renderContactProposalsInbox();
-      }
-    }
-
+    // 4. Dynamic Gallery Loader (Reads sequential image indexes from assets folder)
     function loadDynamicGallery() {
       const galleryGrid = document.getElementById('gallery-grid');
       if (!galleryGrid) return;
@@ -881,7 +798,6 @@
 
     // Initialize metrics and list logs on dom loading complete
     window.addEventListener('DOMContentLoaded', () => {
-      renderContactProposalsInbox();
       loadDynamicGallery();
     });
   </script>
